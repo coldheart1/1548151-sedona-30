@@ -3,6 +3,37 @@
    <head>
       <meta charset="utf-8">
       <title>HTML Academy: каталог гостиниц Седона</title>
+      <style type="text/css">
+         .rating-result {
+         display: inline-block;
+         font-size: 0;
+         }
+         .rating-result span {
+         padding: 0;
+         font-size: 32px;
+         margin: 0 3px;
+         line-height: 1;
+         color: lightgrey;
+         text-shadow: 1px 1px #bbb;
+         }
+         .rating-result > span:before {
+         content: '★';
+         }
+         .rating-result > span.active {
+         color: gold;
+         text-shadow: 1px 1px #c60;
+         }      
+      </style>
+      <style type="text/css">
+         .child {
+         position: absolute;
+         top: 0;
+         left: 0;
+         }
+         .parent {
+         position: relative;
+         }
+      </style>
    </head>
    <body>
       <header>
@@ -59,8 +90,9 @@
                </fieldset>
                <p>
                   Стоимость в сутки<br>
-                  <!--форма ползунка ОТ-ДО-->
-                  <input type="range" id="filter-price" min="0" max="3000" step="10" value="1500">
+                  <input type="text" id="text"> <br>
+                  <input type="range" class="child" min="0" max="1500" step="10" value="500">
+                  <input type="range" class="parent" min="1500" max="3000" step="10" value="1500">
                </p>
                <button type="submit">Показать</button>
             </form>
@@ -76,11 +108,21 @@
                      </p>
                   </a>
                   <p>
-                     Гостиница от 4000 ₽ <br>
-                     <button type="button">Подробнее</button>
+                     Гостиница от 4000 ₽ 
+                  </p>
+                  <p><button type="button">Подробнее</button>
                      <button type="button">Забронировать</button>
                   </p>
                </li>
+            </ul>
+            <div class="rating-result">
+               <span class="active"></span>	
+               <span class="active"></span>    
+               <span class="active"></span>  
+               <span class="active"></span>    
+            </div>
+            <p> <span>Рейтинг: 8.5</span></p>
+            <ul>
                <li>
                   <a href="motel.html">
                      <h2>Desert Quail Inn</h2>
@@ -89,11 +131,20 @@
                      </p>
                   </a>
                   <p>
-                     Мотель от 3000 ₽ <br>
-                     <button type="button">Подробнее</button>
+                     Мотель от 3000 ₽ 
+                  </p>
+                  <p> <button type="button">Подробнее</button>
                      <button type="button">Забронировать</button>
                   </p>
                </li>
+            </ul>
+            <div class="rating-result">
+               <span class="active"></span>	
+               <span class="active"></span>    
+               <span class="active"></span>  
+            </div>
+            <p> <span>Рейтинг: 8.9</span></p>
+            <ul>
                <li>
                   <a href="apartment.html">
                      <h2>Villas at Poco Diablo</h2>
@@ -102,19 +153,25 @@
                      </p>
                   </a>
                   <p>
-                     Апартаменты от 2000 ₽ <br>
-                     <button type="button">Подробнее</button>
+                     Апартаменты от 2000 ₽ 
+                  </p>
+                  <p><button type="button">Подробнее</button>
                      <button type="button">Забронировать</button>
                   </p>
                </li>
             </ul>
+            <div class="rating-result">
+               <span class="active"></span>	
+               <span class="active"></span>    
+            </div>
+            <p> <span>Рейтинг: 9.2</span></p>
          </section>
       </main>
       <footer>
          <section>
             <h2>Контакты</h2>
-            <p>#visitsedona<br>
-               ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66 </a>
+            <p>#visitsedona</p>
+            <p>ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66 </a>
             </p>
          </section>
          <section>
@@ -125,7 +182,7 @@
                <li><a href="#">youtube</a></li>
             </ul>
          </section>
-         <p> Website by <a href="https://htmlacademy.ru"> </a>
+         <p> Website by <a href="https://htmlacademy.ru" target="_blank" rel="nofollow"> </a>
          </p>
       </footer>
    </body>
